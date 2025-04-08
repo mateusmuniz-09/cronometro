@@ -97,7 +97,13 @@ historico.addEventListener("click", function (e) {
     const li = botao.closest("li");
     if (li) {
       historico.removeChild(li);
+      body.style.background =
+        "linear-gradient(to right,rgb(180, 0, 0),rgb(233, 46, 46),rgb(160, 3, 3))";
       alert(`✅ Histórico #${contador} removido!`);
+      setTimeout(() => {
+        body.style.background =
+          "linear-gradient(to right, #0000cd, #1e90ff, #00008b)";
+      }, 500);
       atualizarNumeracao();
     }
   }
