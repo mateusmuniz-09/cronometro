@@ -33,10 +33,10 @@ zerar.addEventListener("click", function () {
     salvarHitorico();
     body.style.background =
       "linear-gradient(to right, #0000cd, #1e90ff, #00008b)";
-
+    alert("✅ Salvo no histórico!");
     zerarCronometro();
   } else {
-    alert("Cronômetro não inicializado.");
+    alert("⚠️ Cronômetro não inicializado.");
   }
 });
 
@@ -97,6 +97,7 @@ historico.addEventListener("click", function (e) {
     const li = botao.closest("li");
     if (li) {
       historico.removeChild(li);
+      alert(`✅ Histórico #${contador} removido!`);
       atualizarNumeracao();
     }
   }

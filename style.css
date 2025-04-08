@@ -121,11 +121,6 @@ body {
   font-size: 18px;
 }
 h2 {
-  padding: 8px;
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%, -10%);
   color: #ffffff;
 }
 h3 {
@@ -135,6 +130,5 @@ h3 {
 .mm {
   font-weight: 700;
   color: #0000003a;
-  position: absolute;
-  bottom: 4%;
+  margin-top: 15px;
 }
