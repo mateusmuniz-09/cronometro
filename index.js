@@ -29,11 +29,15 @@ pausar.addEventListener("click", function () {
 });
 
 zerar.addEventListener("click", function () {
-  salvarHitorico();
-  body.style.background =
-    "linear-gradient(to right, #0000cd, #1e90ff, #00008b)";
+  if (horas !== 0 || minutos !== 0 || segundos !== 0 || milissegundos !== 0) {
+    salvarHitorico();
+    body.style.background =
+      "linear-gradient(to right, #0000cd, #1e90ff, #00008b)";
 
-  zerarCronometro();
+    zerarCronometro();
+  } else {
+    alert("Cronômetro não inicializado.");
+  }
 });
 
 function atualizarContador() {
@@ -93,6 +97,20 @@ historico.addEventListener("click", function (e) {
     const li = botao.closest("li");
     if (li) {
       historico.removeChild(li);
+      atualizarNumeracao();
     }
   }
 });
+
+function atualizarNumeracao() {
+  const itens = historico.querySelectorAll("li");
+  contador = 0;
+
+  itens.forEach((li) => {
+    contador++;
+    const texto = li.querySelector("p");
+    const partes = texto.textContent.split(":");
+    const tempo = partes.slice(1).join(":").trim();
+    texto.textContent = `#${contador}: ${tempo}`;
+  });
+}
