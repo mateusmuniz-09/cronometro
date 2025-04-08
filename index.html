@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <script src="index.js" defer></script>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Cronômetro</title>
+  </head>
+  <body>
+    <h2>Cronômetro:</h2>
+    <div class="container">
+      <div class="box-tempo">
+        <p class="tempo" id="tempo">00:00:00</p>
+        <span id="mili">00</span>
+      </div>
+      <div class="botoes">
+        <button id="iniciar"><i class="bi bi-play-fill"></i></button>
+        <button id="pausar"><i class="bi bi-pause-fill"></i></button>
+        <button id="zerar"><i class="bi bi-arrow-counterclockwise"></i></button>
+      </div>
+    </div>
+
+    <h3>Histórico:</h3>
+    <ul class="historico"></ul>
+    <p class="mm">MM TecSolutions</p>
+  </body>
+</html>
